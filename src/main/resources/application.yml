@@ -1,0 +1,29 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: rabbitmq-tutorial
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: password
+    connection-timeout: 5s
+    queue:
+      name: javaguides
+      json:
+        name: javaguides_json
+    exchange:
+      name: javaguides_exchange
+      json:
+        name: javaguides_json
+    routingKey: # Corrigido para 'routingKey' no singular
+      name: javaguides_routing_key
+      json:
+        name: javaguides_json_routing_key
+
+
+
+
+
